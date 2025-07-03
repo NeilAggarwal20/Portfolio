@@ -116,3 +116,9 @@ closeBtn.addEventListener("click", () => {
 });
 
 
+// Hamburger menu toggle for mobile
+const nav = document.querySelector('nav');
+const bars = document.querySelector('.fa-bars');
+bars.addEventListener('click', () => {
+    nav.classList.toggle('open');
+});

@@ -222,7 +222,7 @@ section span{
     margin-left: 30px;
     padding: 20px;
     border-radius: 20px;
-    transition: scale 1s ease-in-out;
+    transition: scale 0.5s ease-in-out;
 }
 .desc:hover{
     scale: 1.1;
@@ -615,4 +615,208 @@ nav ul li a:hover {
     background-color: #333;
     color: #fff;
     border: 1px solid #666;
+}
+
+
+/*  RESPONSIVE NAVIGATION  */
+@media (max-width: 900px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 20px;
+    }
+    nav ul span {
+        left: 5%;
+        font-size: 24px;
+    }
+    nav ul li {
+        margin-right: 0;
+        padding: 18px;
+        font-size: 18px;
+    }
+}
+
+/* Hamburger menu for mobile */
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    nav ul span {
+        left: 10px;
+        top: 20px;
+        font-size: 22px;
+        position: static;
+    }
+    .fa-bars {
+        display: block !important;
+        position: absolute;
+        right: 20px;
+        top: 28px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    nav ul li {
+        display: none;
+    }
+    nav.open ul li {
+        display: block;
+        background: #fff;
+        color: #222;
+        margin: 0;
+        padding: 16px 10px;
+        border-radius: 0;
+        font-size: 20px;
+    }
+}
+
+/*  MAIN SECTION  */
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+    section, aside {
+        width: 100%;
+        height: auto;
+        min-height: 350px;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+    aside span {
+        position: static;
+        margin: 0 auto;
+        display: block;
+        width: 320px;
+        height: 320px;
+    }
+    aside img {
+        position: absolute;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        scale: 1;
+    }
+    section {
+        font-size: 34px;
+        padding: 20px 0;
+        height: auto;
+    }
+    .contact-btn {
+        width: 90%;
+        max-width: 300px;
+        font-size: 22px;
+        height: 60px;
+    }
+}
+
+/*  ABOUT SECTION  */
+@media (max-width: 1000px) {
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 0 10px;
+    }
+    .desc {
+        width: 90vw;
+        margin: 0 auto 30px auto;
+        font-size: 20px;
+    }
+    .about-heading {
+        margin-left: 10px;
+        font-size: 36px;
+    }
+}
+
+/*  WORK SECTION  */
+@media (max-width: 1000px) {
+    .work-section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 80px);
+        gap: 20px;
+        margin: 0 10px;
+    }
+    .work-heading {
+        margin-left: 10px;
+        font-size: 36px;
+    }
+    .todo, .weather, .calc, .flip {
+        width: 95%;
+        max-width: 350px;
+        margin: 10px auto;
+        max-height: 180px;
+    }
+    .todo-heading, .weather-heading, .calc-heading, .flip-heading {
+        margin-left: 50px;
+        font-size: 22px;
+    }
+    .many {
+        left: 50%;
+        top: 120%;
+        font-size: 1.5rem;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+/*  MOBILE FIRST  */
+@media (max-width: 600px) {
+    nav {
+        height: 60px;
+    }
+    .about-heading, .work-heading {
+        font-size: 26px;
+        margin-left: 5px;
+    }
+    section {
+        font-size: 22px;
+        padding: 10px 0;
+    }
+    .desc {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .footer {
+        font-size: 14px;
+        padding: 20px 5px;
+    }
+    .footer-content p {
+        margin: 5px 0;
+    }
+    .footer .socials a {
+        margin: 0 8px;
+        font-size: 15px;
+    }
+    .contact-btn {
+        font-size: 16px;
+        height: 45px;
+        max-width: 95vw;
+    }
+    .contact-modal-content {
+        padding: 10px;
+    }
+}
+
+/*  CONTACT MODAL */
+@media (max-width: 500px) {
+    .contact-modal-content {
+        width: 98vw;
+        max-width: 98vw;
+        padding: 7px;
+    }
+    .contact-modal-content input,
+    .contact-modal-content textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .contact-modal-content button {
+        font-size: 15px;
+        padding: 10px;
+    }
 }
